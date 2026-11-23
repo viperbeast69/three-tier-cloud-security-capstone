@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Three-Tier Cloud Security Capstone</title>
+  <style>
+    body { font: 16px system-ui, sans-serif; max-width: 760px; margin: 10vh auto; padding: 0 24px; color: #e8eef8; background: #101827; }
+    main { padding: 28px; border: 1px solid #34445c; border-radius: 14px; background: #182438; }
+    button { padding: 10px 16px; border: 0; border-radius: 8px; cursor: pointer; }
+    pre { white-space: pre-wrap; color: #a9d5ff; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Three-Tier Cloud Application</h1>
+  <p>Frontend tier is running. Use the button to check the application/API tier.</p>
+  <button id="check">Check API health</button>
+  <pre id="result" aria-live="polite">Waiting for request…</pre>
+</main>
+<script>
+document.getElementById("check").addEventListener("click", async () => {
+  const out = document.getElementById("result");
+  out.textContent = "Checking…";
+  try {
+    const response = await fetch("/api/health");
+    const data = await response.json();
+    out.textContent = JSON.stringify({httpStatus: response.status, ...data}, null, 2);
+  } catch (_) {
+    out.textContent = "API request failed. Check the API service and network configuration.";
+  }
+});
+</script>
+</body>
+</html>
