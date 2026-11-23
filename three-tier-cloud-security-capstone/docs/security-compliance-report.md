@@ -47,7 +47,15 @@ Out of scope unless separately implemented:
 
 See [Threat Model](threat-model.md). Risks include injection, credential exposure, public database exposure, web exploits, lateral movement, privilege escalation, data disclosure, denial of service, vulnerable images, and insufficient monitoring.
 
-## 5. Compliance considerations
+## 5. Risk assessment and framework mapping
+
+See [Risk Assessment and Framework Mapping](risk-assessment-framework-mapping.md) for the initial risk register, scoring method, treatments, and NIST CSF 2.0 mapping. Re-score risks after controls are deployed and tested.
+
+## 6. Cost management
+
+See [Cloud Concepts and Design](cloud-concepts-and-design.md) for the resource-level cost table. Complete the estimate using AWS Pricing Calculator for the selected region, resource sizes, runtime, and expected traffic. Record actual lab spend from AWS billing/Cost Explorer. The design includes chargeable services such as ALB, NAT Gateway, Fargate, RDS, WAF, CloudWatch, ECR, and data transfer. Set a budget alert and destroy lab resources when finished.
+
+## 7. Compliance considerations
 
 The controls are mapped at a high level to common security principles found in frameworks such as:
 - **CIS AWS Foundations Benchmark:** identity/access management, logging, networking, and monitoring.
@@ -56,7 +64,7 @@ The controls are mapped at a high level to common security principles found in f
 
 This is an educational control alignment, **not** a formal compliance assessment, certification, or claim of compliance. Applicability depends on the organization's scope, jurisdiction, data types, and contractual obligations.
 
-## 6. Validation results
+## 8. Validation results
 
 Complete this section only after running the checks. Do not mark a control as passed without evidence.
 
@@ -73,7 +81,7 @@ Complete this section only after running the checks. Do not mark a control as pa
 | Logging | Application logs visible in CloudWatch | [Record] | [Pending] |
 | IAM review | No broad wildcard permissions beyond justified service needs | [Record] | [Pending] |
 
-## 7. Findings and remediation
+## 9. Findings and remediation
 
 | ID | Finding | Severity | Remediation | Owner | Due date |
 |---|---|---|---|---|---|
@@ -83,7 +91,7 @@ Complete this section only after running the checks. Do not mark a control as pa
 
 Update severities after actual testing and risk assessment.
 
-## 8. Go-live recommendation
+## 10. Go-live recommendation
 
 **Current recommendation: Conditional / Not yet approved.** The architecture provides a reasonable security baseline for a lab demonstration, but production approval must wait until:
 1. Deployment and all validation checks are complete.
@@ -92,7 +100,7 @@ Update severities after actual testing and risk assessment.
 4. Operations ownership, alerting, incident response, and rollback procedures are documented.
 5. Security and business owners provide written approval.
 
-## 9. Sign-off
+## 11. Sign-off
 
 | Role | Name | Decision | Date |
 |---|---|---|---|

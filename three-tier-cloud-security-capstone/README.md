@@ -47,6 +47,20 @@ flowchart TB
 - AWS WAF managed rule groups provide a baseline web-attack filter.
 - CloudWatch receives application logs.
 
+
+## 1A. Assignment learning outcomes
+
+The capstone brief asks you to apply cloud concepts and service/deployment models to a real use case; design a scalable architecture using virtualization, compute, storage, and networking; implement identity, access, data, and network security; assess threats and map controls to a recognized framework; and monitor, audit, and present the solution with cost awareness.
+
+The supporting write-ups are:
+- [Cloud concepts, service/deployment models, architecture, and cost](docs/cloud-concepts-and-design.md)
+- [Risk assessment and NIST CSF 2.0 mapping](docs/risk-assessment-framework-mapping.md)
+- [Security and compliance report](docs/security-compliance-report.md)
+- [Threat model](docs/threat-model.md)
+- [Deployment validation checklist](docs/validation-checklist.md)
+
+Complete all `[Fill in]` and `[Assess]` fields with your actual deployment observations and AWS pricing data before submission.
+
 ## 2. Repository structure
 
 ```text
